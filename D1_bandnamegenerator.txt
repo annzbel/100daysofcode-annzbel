@@ -1,0 +1,16 @@
+#Band Name Generator - Day 1 in 100 Days of Coding challenge
+print("Welcome to the Band Name Generator!")                                                   #welcoming the user using a print statement
+
+proceed = input("We will need to ask a few questions first. Are you ready? ")                  #using an input statement to make programme more interactive
+
+if proceed.strip().lower() in ("ok", "okay", "yes"):                                           #if else statement to proceed, .strip() to strip blank spaces from user input to accept different answers and .lower() to normalise inputs regardless of capitalisation. 
+    print("Great, let's get started!")
+
+    city = input("Firstly, what is the name of the city you grew up in? ")                     #input of city name, saved in the variable city
+    pet = input("Fantastic! What was the name of your childhood pet? ")                        #input of pet name, saved in the variable pet
+
+    print("[Generating your band name]")
+    print("...")
+    print("Your band name is", city.upper() + " " + pet.upper())                               #concatenating city + pet for band name, using .upper() to make name all capitals.
+else:
+    print("No worries, try again when you're ready!")                                          #else statement if user does not give valid response in line 4. 
