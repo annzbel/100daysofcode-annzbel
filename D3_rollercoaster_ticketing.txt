@@ -1,0 +1,31 @@
+#Day 3 - Rollercoaster ticketing programme
+#Creating a programme to ticket a person depending on different conditions (height, age, extra add-ons)
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+bill = 0
+#Condition 1: person needs to be >= 120cm to be able to ride the rollercoaster.
+if height >= 120:
+    print("You are able to ride the rollercoaster.")
+    #Condition 2: Child (max age 12) ticket £5, Youth (max age 18) £7, Adult ticket (over 18) £12)
+    age = input("What is your age?")
+    age = int(age)
+    if age <= 12 :
+        bill = 5
+        print("Your ticket will be £5.")
+    elif age <= 18:
+        bill = 7
+        print("Your ticket will be £7.")
+    elif age > 18:
+        bill = 12
+        print("Your ticket will be £12.")
+    else:
+        print("Please add a valid age.")
+    #Condition 3: Regardless of ticket price, customer to be offered photos taken.
+    wants_photos = input("Do you want photos from the ride for an extra £3? Type Y for Yes or N for No")
+    if wants_photos.upper() == "Y" :
+        bill += 3
+    print(f"Your total bill is £{bill}.") #Total bill printed, f string used to add integer into string.
+
+else:
+    print("Sorry, you are unable to ride the rollercoaster.")
